@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "XOSORIX",
+  "description": "This extension allows you to chat with an AI, Summarize text and fix grammar.",
+  "version": "0.0.1",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "assets/favicon-16x16.png",
+    "32": "assets/favicon-32x32.png",
+    "150": "assets/mstile-150x150.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://api.openai.com/*",
+    "activeTab",
+    "storage"
+  ]
+}

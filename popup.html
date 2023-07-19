@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XOSORIX</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-header-background">
+      <p id="load-model"></p>
+      <div class="top-header">
+        <!-- <div class="logo-company">XOSORIX</div> -->
+        <div class="logo-company">
+          <img src="./assets/z3r0Logo.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <button id="clear-conversation">
+      <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <div class="navbar-background"></div>
+    <div class="navbar">
+      <a href="#modal1" class="open-modal-link"
+        ><i class="fa fa-cog" aria-hidden="true"></i
+      ></a>
+      <a href="#home" class="active"
+        ><i class="fa fa-home" aria-hidden="true"></i
+      ></a>
+      <a href="#modal2" class="open-modal-link"
+        ><i class="fa fa-sticky-note" aria-hidden="true"></i
+      ></a>
+    </div>
+    <!-- Navigation -->
+
+    <!-- Chat window-->
+    <div id="chat-window">
+      <div id="chat-messages"></div>
+      <form id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          placeholder="Type your message here..."
+        />
+        <button class="send-button" type="submit">
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+        </button>
+      </form>
+    </div>
+    <!-- Chat window-->
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="modal">
+      <span class="close-modal-link" aria-label="Close settings modal">
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+      </span>
+      <div class="modal-content">
+        <h1>Settings</h1>
+        <div class="tabs">
+          <ul class="tab-links">
+            <li class="tab-link active" data-tab="tab-1">
+              <i class="fa fa-sliders" aria-hidden="true"></i>
+            </li>
+            <li class="tab-link tab-2" data-tab="tab-2">
+              <i class="fa fa-paint-brush" aria-hidden="true"></i>
+            </li>
+            <li class="tab-link" data-tab="tab-3">
+              <i class="fa fa-cogs" aria-hidden="true"></i>
+            </li>
+          </ul>
+          <div id="tab-1" class="tab-content active">
+            <h3>Models</h3>
+            <p>Choose one of the 3 models:</p>
+            <form id="model-form">
+              <label for="model-select">Select data model:</label><br />
+              <select id="model-select" name="model">
+                <option value="default">AI</option>
+                <option value="Summarize">Summarize</option>
+                <option value="Grammar correction">Grammar correction</option>
+              </select>
+              <p>NOTE: ALL THESE MODELS ARE ENGLISH</p>
+            </form>
+          </div>
+          <div id="tab-2" class="tab-content">
+            <!-- <div class="buttons-theme-container"> -->
+            <h3>Themes</h3>
+            <p>Choose one of the 4 themes:</p>
+            <!-- </div> -->
+          </div>
+          <div id="tab-3" class="tab-content">
+            <h3>Settings</h3>
+            <p>More settings.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 1 -->
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="modal">
+      <span class="close-modal-link"
+        ><i class="fa fa-times-circle" aria-hidden="true"></i
+      ></span>
+      <div class="modal-content">
+        <h1>Notes</h1>
+        <div class="modal-text">
+          <h3>Save your notes here.</h3>
+          <p>Write or paste something you want to remember.</p>
+          <textarea id="note-input"></textarea>
+          <div class="Flipped">
+            <textarea id="note-input-2"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+
+    <div id="clock"></div>
+    <script src="popup.js"></script>
+    <script src="clock.js"></script>
+    <script src="modal.js"></script>
+    <script src="tabs.js"></script>
+  </body>
+</html>
